@@ -1,0 +1,47 @@
+<!--我的订单-->
+<view class="container dingdan-wrap">
+    <view class="wrap">
+<!--循环订单列表-->
+    <block wx:for="{{orderList}}" wx:for-item="order">
+
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">{{order.dateString}}</view>
+                </view>
+            </view>
+            <view wx:if="simple" bindtap="visitDetail" data-order="{{order}}" class="weui-form-preview__bd">
+
+                <block wx:for="{{order.detail}}" wx:for-item="detail">
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">预约号</view>
+                        <span class="weui-form-preview__value">{{order.shortNumber}}</span>
+                    </view>
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">预约理发师</view>
+                        <span class="weui-form-preview__value">{{detail.name}}</span>
+                    </view>
+                </block>
+
+            </view>
+            <view wx:else bindtap="visitDetail" data-order="{{order}}" class="weui-form-preview__bd">
+
+                <block wx:for="{{order.detail}}" wx:for-item="detail">
+                    <view class="weui-form-preview__item">
+                        <view class="weui-form-preview__label">{{detail.name}}</view>
+                        <span class="weui-form-preview__value">{{detail.price}}<small>x{{detail.count}}</small></span>
+                    </view>
+                </block>
+
+                <view class="weui-form-preview__item total-price">
+                    <view class="weui-form-preview__label"></view>
+                    <span class="weui-form-preview__value">商品总额<span>{{order.price}}</span></span>
+                </view>
+            </view>
+
+        </view>
+
+    </block>
+
+    </view>
+</view>

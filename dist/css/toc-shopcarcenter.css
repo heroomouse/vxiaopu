@@ -1,0 +1,124 @@
+.price-oper {
+  margin-top: 4px;
+}
+.price-oper a {
+  width: 24px;
+  height: 32px;
+  margin-left: 10px;
+  display: inline-block;
+  float: left;
+}
+.price-oper a:first-child {
+  margin-left: 5px;
+}
+.price-oper span {
+  float: left;
+  display: inline-block;
+  padding-left: 5px;
+  line-height: 32px;
+}
+/*购物车*/
+.shopcar-bar {
+  background: #fff;
+  position: fixed;
+  bottom: 52px;
+  width: 100%;
+}
+.shopcar-bar .weui-cell {
+  padding: 0;
+}
+.shopcar-bar .weui-cell .weui-cell__hd {
+  margin: 0 10px 0 15px;
+  position: relative;
+  text-align: center;
+}
+.shopcar-bar .weui-cell .weui-cell__hd .weui-badge {
+  background: #f97a4d;
+  position: absolute;
+  top: auto;
+  right: -5px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  bottom: 5px;
+}
+.shopcar-bar .weui-cell .weui-cell__hd i {
+  display: inline-block;
+  color: #f97a4d;
+  font-size: 30px;
+}
+.shopcar-bar .weui-cell .weui-cell__bd p {
+  font-size: 20px;
+  color: #f97a4d;
+  padding-left: 15px;
+}
+.shopcar-bar .weui-cell .weui-cell__ft .weui-btn {
+  height: 52px;
+  line-height: 52px;
+  border-radius: 0;
+  width: 100px;
+  font-size: 16px;
+}
+.shopcarcenter {
+  background: #eee;
+}
+.shopcarcenter .shop-item {
+  margin-bottom: 15px;
+}
+.shopcarcenter .shop-item .weui-cells {
+  margin-top: 0;
+}
+.shopcarcenter .shop-item .weui-cells .weui-cell {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.shopcarcenter .shop-item .shop-item-title:before,
+.shopcarcenter .shop-item .shop-item-title:after {
+  display: none;
+}
+.shopcarcenter .shop-item .shop-item-title .weui-cell {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.shopcarcenter .shop-item .weui-media-box__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding-bottom: 0;
+  margin-top: 0;
+  font-size: 16px;
+  color: #000;
+  height: 32px;
+  line-height: 32px;
+}
+.shopcarcenter .shop-item .weui-media-box__info span {
+  font-weight: 700;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  flex: 1;
+  display: block;
+}
+.shopcarcenter .shopcar-bar .weui-cell__hd {
+  text-align: left;
+  -webkit-box-flex: 1;
+  flex: 1;
+  box-flex: 1;
+  margin-right: 0;
+}
+.shopcarcenter .shopcar-bar .weui-cell__ft span {
+  display: inline-block;
+  float: left;
+  line-height: 60px;
+  margin-right: 10px;
+}
+.shopcarcenter .shopcar-bar .weui-cell__ft span b {
+  font-weight: 700;
+  color: #f70;
+}
+.shopcarcenter .shopcar-bar .weui-cell__ft a {
+  display: inline-block;
+  float: left;
+}

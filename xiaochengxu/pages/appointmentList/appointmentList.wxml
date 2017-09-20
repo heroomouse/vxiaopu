@@ -1,0 +1,43 @@
+      <block wx:if="{{productList.length == 0}}">
+        <view style="display:flex; flex-direction:column;min-height:100%;justify-content:space-between;">
+          <text style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">暂无理发师</text>
+        </view>
+      </block>
+<view class="container yuyue-wrap">
+  <view class="wrap">
+    <view class="shop-wrap" style="padding-bottom: 50px;">
+      <view class="shop-layer">
+        <view class="weui-panel__bd">
+          <!--item1-->
+          <view wx:for="{{productList}}" class="weui-media-box weui-media-box_appmsg">
+            <view class="weui-media-box__hd">
+              <image class="weui-media-box__thumb" src="{{item.imageList[0]}}" alt="{{item.name}}"></image>
+            </view>
+            <view class="weui-media-box__bd">
+              <view class="weui-media-box__title">{{item.name}}</view>
+              <view class="weui-media-box__info"><span><em class="statu {{item.status==0?'statu-default':'statu-dis'}}">{{item.status==0?'上班中':'休息中'}}</em></span>
+                <view wx:if="{{item.status==0}}" bindtap="appointmentTap" data-item="{{item}}" href="javascript:;" class="weui-btn weui-btn_primary">预约</view>
+              </view>
+            </view>
+          </view>
+            <!-- <view class="weui-media-box__bd">
+              <view class="weui-media-box__info">
+                <view wx:if="{{!isOnWork}}" href="javascript:;" class="weui-btn weui-btn_empty">""
+                </view>
+              </view>
+            </view> -->
+        </view>
+
+      </view>
+
+    </view>
+
+    <view class="weui-media-box__bd_fix_bottom">
+      <view class="weui-media-box__info">
+        <button bindtap="appointmentRandomTap" class="weui-btn weui-btn_primary" disabled="{{isOnWork?false:true}}">{{isOnWork ? '快速预约' : '预约时间9:00~21:00'}}
+        </button>
+      </view>
+    </view>
+
+  </view>
+</view>
